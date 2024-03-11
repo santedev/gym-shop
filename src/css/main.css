@@ -1,0 +1,17 @@
+@import "./style.css";
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  margin-bottom: 8px;
+  width: 20px;
+}
