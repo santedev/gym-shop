@@ -1,0 +1,42 @@
+@import "./style.css";
+
+#mobile-icons{
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  margin-bottom: 8px;
+  width: 20px;
+}
+
+@media (max-width: 530px) {
+  .menu-toggle {
+    display: block;
+  }
+ .mobile-bar{
+  display: block;
+  position: fixed;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10dvh;
+  padding: 20px;
+  z-index: 999;
+ }
+ .mobile-bar #mobile-icons {
+  display: inline;
+ }
+}
