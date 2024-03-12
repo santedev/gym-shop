@@ -197,6 +197,26 @@ p {
   justify-self: baseline;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .min-content {
   width: min-content;
 }
