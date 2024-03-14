@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static "signUp.css" %}" />
+    <title>New Account</title>
+  </head>
+  <body>
+    <div class="d-flex align-center justify-center vh-100 bg-black">
+      <div class="bg-secondary border-radious">       
+          <div class="d-flex row p-4">
+            <form class="d-flex column align-center gap" action="/submit" method="post">
+              <input type="text" name="name" id="" placeholder="name" />
+              <input type="email" name="email" id="" placeholder="email" />
+              <input type="password" name="password" id="" placeholder="password" />
+              <input type="password" name="check" id="" placeholder="confirm password" />
+              <span id="user-input-message-text" class="user-input-message"></span>
+              <input type="submit" name="submit" id="" />
+            </form>
+            <div>
+                <img src="img/lock.svg" alt="image" class="">
+            </div>
+          </div>        
+      </div>
+    </div>
+    <script src="signUp.js"></script>
+  </body>
+</html>

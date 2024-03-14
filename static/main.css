@@ -1,33 +1,51 @@
 @import "./style.css";
 
+.icon {
+  width: calc(var(--def-space) * 1.75);
+}
+
 #mobile-icons {
   display: none;
 }
 
-.menu-toggle {
+#menu-toggle {
   display: none;
-  background: transparent;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  padding: 0;
 }
 
-.menu-toggle span {
-  background: var(--white);
-  display: block;
-  height: 2px;
-  margin-bottom: 8px;
-  width: 20px;
+#menu-toggle[aria-expanded="true"] .user-setting-icon {
+  display: none;
 }
 
-.menu-toggle span:nth-last-child(1) {
-  margin-bottom: 0;
+#menu-toggle[aria-expanded="false"] .user-close-icon {
+  display: none;
+}
+
+#user-settings[aria-hidden="true"] {
+  display: none;
+}
+
+#user-settings a {
+  color: var(--white);
 }
 
 @media (max-width: 580px) {
-  .menu-toggle {
-    display: block;
+  #menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 9999;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  #user-settings[aria-hidden="false"] {
+    position: fixed;
+    display: flex;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    z-index: 9998;
+    padding: min(20vh, 10rem) 2em;
+    background: var(--menu-bg);
   }
 
   .mobile-bar {
@@ -38,7 +56,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-   
+
     padding-top: 10px;
     padding-bottom: 8px;
     z-index: 999;
@@ -49,12 +67,12 @@
     margin-inline: auto;
     width: clamp(15px, 5vw, 25px);
     padding: 0;
-    margin-bottom: calc(var(--def-space) * .25);
+    margin-bottom: calc(var(--def-space) * 0.25);
   }
 
   .mobile-bar span {
     display: block;
     text-align: center;
-    font-size: calc(var(--def-space) * .5);
+    font-size: calc(var(--def-space) * 0.5);
   }
 }

@@ -52,6 +52,12 @@ p {
   font-family: var(--s-font);
 }	
 
+.dark-mode {
+  --primary: #260a6d;
+  --secondary: #efda74;
+  --main: #0a031a;
+}
+
 .container {
   max-width: 1800px;
   margin: 0 auto;
@@ -249,7 +255,7 @@ p {
   color: var(--black);
 }
 
-.bg-white {
+.bg-black {
   background: var(--black);
 }
 

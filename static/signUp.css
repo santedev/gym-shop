@@ -1,0 +1,9 @@
+@import './style.css';
+
+.user-input-message {
+    display: none;
+}
+
+.last-message {
+    display: inline-block;
+}
