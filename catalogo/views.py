@@ -1,6 +1,7 @@
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .serializer import ProductSerializer
+from .models import New_Product
 
-# Create your views here.
-def catalogo(request):
-    return HttpResponse("Catalogo")
-
+class ProductView(viewsets.ModelViewSet):
+    serializer_class= ProductSerializer
+    queryset= New_Product.objects.all()

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Product, New
+
+from . import models
 
 # Register your models here.
-admin.site.register(Product)
-admin.site.register(New)
+admin.site.register(models.New_Product)

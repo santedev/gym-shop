@@ -1,11 +1,17 @@
 from django.contrib import admin
-from django.urls import path
-from catalogo import views
+from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
+
 from home.views import home
-"""from .views import shop"""
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('catalogo/', views.catalogo, name='catalogo'),
-    path('', home)
+    path('', home, name='home'),
+    path('product/', include('catalogo.urls'))
 ]
-"""path("shop/", shop),"""
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
