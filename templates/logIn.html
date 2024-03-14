@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="signUp.css" />
+    <link rel="stylesheet" href="{% static "logIn.css" %}" />
     <title>Enter Account</title>
   </head>
   <body>
     <div class="d-flex align-center justify-center vh-100 bg-black">
       <div class="bg-secondary border-radious">       
           <div class="d-flex row p-4">
-            <form class="d-flex column align-center gap" action="/submit" method="get">
+            <form class="d-flex column align-center gap" action="/submit" method="post">
               <input type="text" name="name" id="" placeholder="name or email" />
               <input type="password" name="password" id="" placeholder="password" />
               <input type="submit" name="submit" id="" />
