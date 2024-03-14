@@ -15,10 +15,36 @@
         </div>
         <div>
           <nav>
-            <button class="menu-toggle" aria-expanded="false">
-              <span></span>
-              <span></span>
+            <button id="menu-toggle" aria-expanded="false">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                class="bi bi-person-circle user-setting-icon icon"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path
+                  fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                class="bi bi-x-lg user-close-icon icon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+              </svg>
             </button>
+            <span id="user-settings" aria-hidden="true">
+              <a href="{% include 'cart.html'%}">Cart</a>
+              <a href="{% include 'shop.html'%}">Latest Purchases</a>
+              <a href="{% include 'shop.html'%}">Offers</a>
+              <a href="{% include 'shop.html'%}">Settings</a>
+            </span>
             <ul class="d-flex gap mobile-bar">
               <il>
                 <a class="white" href="{% include 'index.html'%}"
@@ -89,7 +115,7 @@
                 </a>
               </il>
               <il>
-                <a class="white" href="{% include 'signUp.html'%}"
+                <a class="white" href="{% include 'SignUp.html'%}"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="white"
@@ -110,6 +136,8 @@
           </nav>
         </div>
       </header>
+      <button id="theme-toggler" aria-checked="false">theme</button>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
