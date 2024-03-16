@@ -9,8 +9,9 @@ from home.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
-    path('product/', include('catalogo.urls'))
+    path('', include('home.urls')),
+    path('product/', include('catalogo.urls')),
+    path('', include('login.urls'))
 ]
 
 
