@@ -7,7 +7,8 @@ router= routers.DefaultRouter()
 router.register(r'v1',views.ProductView, 'tastk')
 
 urlpatterns = [
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path("shop/", views.shop,)
 ]
 
 
